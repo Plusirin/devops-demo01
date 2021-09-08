@@ -32,13 +32,13 @@ func (h *AccountHandler) AccountCreate(c *gin.Context) {
 	}
 
 	accountName := r.AccountName
-	log.Log.Infof("用户名: %s", accountName)
+	log.Infof("用户名: %s", accountName)
 
 	desc := c.Query("desc")
-	log.Log.Infof("desc: %s", desc)
+	log.Infof("desc: %s", desc)
 
 	contentType := c.GetHeader("Content-Type")
-	log.Log.Infof("Header Content-Type: %s", contentType)
+	log.Infof("Header Content-Type: %s", contentType)
 
 	// 把明文密码加密
 	md5Pwd, err := utils.Encrypt(r.Password)

@@ -39,6 +39,6 @@ func main() {
 		middleware.Logging(),
 	)
 	port := viper.GetString("addr")
-	log.Log.Info("开始监听http地址", port)
-	log.Log.Info(http.ListenAndServe(port, r).Error())
+	log.Info("开始监听http地址", log.String("port", port))
+	log.Info(http.ListenAndServe(port, r).Error())
 }

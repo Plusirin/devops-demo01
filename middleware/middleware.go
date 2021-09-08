@@ -7,6 +7,7 @@ import (
 	"devops/myerr"
 	"devops/res"
 	"encoding/json"
+	"fmt"
 	"io/ioutil"
 	"strings"
 	"time"
@@ -51,12 +52,12 @@ func Logging() gin.HandlerFunc {
 		if err := json.Unmarshal(blw.Body.Bytes(), &response); err != nil {
 			code = myerr.InternalServerError.Code
 			message = err.Error()
-			log.Log.Error(err)
+			//log.Error(err)
 		} else {
 			code = response.Code
 			message = response.Message
 		}
-		log.Log.Infof("%-13s | %-12s | %s %s | {code: %d, message: %s}", sub, ip, pad.Right(method, 5, ""), path, code, message)
+		log.Info(fmt.Sprintf("%-13s | %-12s | %-6s %-20s | {code: %d, message: %s}", sub, ip, pad.Right(method, 3, ""), path, code, message))
 	}
 }
 
