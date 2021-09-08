@@ -1,0 +1,12 @@
+2021-09-08 10:15:33	info	devops/main.go:42	开始监听http地址:9091
+2021-09-08 10:15:48	info	middleware/middleware.go:59	5.387ms       | 127.0.0.1    | GET /v1/account | {code: 0, message: OK}
+2021-09-08 10:15:49	info	middleware/middleware.go:59	4.335ms       | 127.0.0.1    | GET /v1/account | {code: 0, message: OK}
+2021-09-08 10:15:55	info	middleware/middleware.go:59	117.338ms     | 127.0.0.1    | POST /v1/account/login | {code: 0, message: OK}
+2021-09-08 10:53:58	info	devops/main.go:42	开始监听http地址:9091
+2021-09-08 10:54:12	info	middleware/middleware.go:59	4.366ms       | 127.0.0.1    | GET /v1/account | {code: 0, message: OK}
+2021-09-08 10:54:37	info	handler/account.go:35	用户名: xwsoft
+2021-09-08 10:54:37	info	handler/account.go:38	desc: 
+2021-09-08 10:54:37	info	handler/account.go:41	Header Content-Type: application/json
+2021-09-08 10:54:37	info	middleware/middleware.go:59	192.655ms     | 127.0.0.1    | POST /v1/account | {code: 0, message: OK}
+2021-09-08 10:55:10	info	middleware/middleware.go:59	42.045ms      | 127.0.0.1    | DELETE /v1/account/1938cc8c-5287-3cad-1e4b-f50fc581d858 | {code: 0, message: OK}
+2021-09-08 10:55:36	info	middleware/middleware.go:59	115.394ms     | 127.0.0.1    | POST /v1/account/login | {code: 0, message: OK}
